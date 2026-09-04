@@ -1,0 +1,169 @@
+/* ============================================================
+   ESCROW PAY — SUPERADMIN PREMIUM THEME
+   Luxury dark-sidebar + gradient accents + glassmorphism
+   ============================================================ */
+
+/* ── Premium Sidebar (deep navy gradient) ─────────────────── */
+body.role-superadmin .sidebar {
+  background: linear-gradient(180deg, #0f1f4b 0%, #1D3B8B 55%, #23479f 100%);
+}
+body.role-superadmin .sidebar::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(16,200,123,.12) 0%, transparent 45%),
+    radial-gradient(circle at 100% 100%, rgba(59,130,246,.15) 0%, transparent 45%);
+  pointer-events: none;
+}
+body.role-superadmin .sidebar-inner { position: relative; z-index: 1; }
+body.role-superadmin .sidebar-brand {
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+}
+body.role-superadmin .sidebar-brand-icon {
+  background: linear-gradient(135deg, var(--secondary), #0ea56b);
+  box-shadow: 0 4px 14px rgba(16,200,123,.4);
+}
+body.role-superadmin .nav-link { border-radius: 10px; }
+body.role-superadmin .nav-item.active .nav-link {
+  background: linear-gradient(90deg, rgba(16,200,123,.22), rgba(255,255,255,.08));
+  box-shadow: inset 0 0 0 1px rgba(16,200,123,.25);
+}
+body.role-superadmin .nav-active-bar {
+  background: linear-gradient(180deg, var(--secondary), #6ee7b7);
+  box-shadow: 0 0 10px rgba(16,200,123,.7);
+}
+body.role-superadmin .sidebar-balance {
+  background: linear-gradient(135deg, rgba(16,200,123,.18), rgba(255,255,255,.06));
+  border: 1px solid rgba(16,200,123,.25);
+}
+
+/* ── Page Header (hero style) ─────────────────────────────── */
+body.role-superadmin .page-header {
+  background: linear-gradient(120deg, #ffffff 0%, #f6f9ff 60%, #eef4ff 100%);
+  border: 1px solid #e4ecfa;
+  border-radius: var(--radius-lg);
+  padding: 22px 26px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+body.role-superadmin .page-header::after {
+  content: '';
+  position: absolute; right: -60px; top: -60px;
+  width: 200px; height: 200px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(29,59,139,.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+body.role-superadmin .page-title {
+  font-size: 24px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Stat Cards (premium gradient icons + glow) ───────────── */
+body.role-superadmin .stat-card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(29,59,139,.07);
+  border-radius: var(--radius-lg);
+}
+body.role-superadmin .stat-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  opacity: 0; transition: opacity var(--dur-fast);
+}
+body.role-superadmin .stat-card:hover::before { opacity: 1; }
+body.role-superadmin .stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+body.role-superadmin .stat-value { font-size: 30px; }
+body.role-superadmin .stat-icon-wrap {
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(29,59,139,.12);
+}
+body.role-superadmin .stat-icon-primary   { background: linear-gradient(135deg, #1D3B8B, #3b5bb5); color: #fff; }
+body.role-superadmin .stat-icon-secondary { background: linear-gradient(135deg, #10C87B, #34d892); color: #fff; }
+body.role-superadmin .stat-icon-warning   { background: linear-gradient(135deg, #f59e0b, #fbbf24); color: #fff; }
+body.role-superadmin .stat-icon-danger    { background: linear-gradient(135deg, #ef4444, #f87171); color: #fff; }
+body.role-superadmin .stat-icon-info      { background: linear-gradient(135deg, #3b82f6, #60a5fa); color: #fff; }
+
+/* ── Cards ────────────────────────────────────────────────── */
+body.role-superadmin .card {
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 12px rgba(29,59,139,.07);
+  transition: box-shadow var(--dur-fast);
+}
+body.role-superadmin .card:hover { box-shadow: var(--shadow-md); }
+body.role-superadmin .card-header { padding: 18px 22px; }
+body.role-superadmin .card-title i { font-size: 18px; }
+
+/* ── Tables (premium header) ──────────────────────────────── */
+body.role-superadmin .data-table thead th {
+  background: linear-gradient(90deg, #f4f7fd, #eef3fc);
+  border-bottom: 2px solid #e0e9f8;
+  color: var(--primary);
+}
+body.role-superadmin .data-table tbody tr:hover {
+  background: linear-gradient(90deg, rgba(29,59,139,.045), rgba(16,200,123,.03));
+}
+
+/* ── Buttons ──────────────────────────────────────────────── */
+body.role-superadmin .btn-primary {
+  background: linear-gradient(135deg, #1D3B8B 0%, #2a52c2 60%, #3b5bb5 100%);
+  box-shadow: 0 4px 16px rgba(29,59,139,.35);
+}
+body.role-superadmin .btn-ghost {
+  background: #fff;
+  border: 1px solid #dde6f5;
+}
+body.role-superadmin .btn-ghost:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: #f6f9ff;
+}
+
+/* ── Topbar ───────────────────────────────────────────────── */
+body.role-superadmin .topbar {
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── Badges (soft glow) ───────────────────────────────────── */
+body.role-superadmin .badge { padding: 4px 12px; font-size: 11.5px; }
+body.role-superadmin .badge-success { box-shadow: 0 2px 8px rgba(16,200,123,.2); }
+body.role-superadmin .badge-danger  { box-shadow: 0 2px 8px rgba(239,68,68,.18); }
+body.role-superadmin .badge-warning { box-shadow: 0 2px 8px rgba(245,158,11,.18); }
+
+/* ── Role tag superadmin (gold accent) ────────────────────── */
+.role-tag.role-superadmin {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  color: #92400e;
+  box-shadow: 0 2px 6px rgba(245,158,11,.25);
+}
+
+/* ── Charts wrapper padding ───────────────────────────────── */
+body.role-superadmin .chart-wrapper { padding: 6px 4px; }
+
+/* ── Empty state ──────────────────────────────────────────── */
+body.role-superadmin .empty-state i {
+  background: linear-gradient(135deg, rgba(29,59,139,.08), rgba(16,200,123,.08));
+  width: 90px; height: 90px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+}
+
+/* ── Scrollbar (brand colored) ────────────────────────────── */
+body.role-superadmin ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), var(--primary-light));
+}
+
+/* ── Print-friendly ───────────────────────────────────────── */
+@media print {
+  body.role-superadmin .sidebar,
+  body.role-superadmin .topbar { display: none; }
+  body.role-superadmin .app-wrapper { margin-left: 0; }
+}

@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "stitch": {
+      "serverUrl": "https://stitch.googleapis.com/mcp",
+      "headers": {
+        "X-Goog-Api-Key": "HALKAN_GALI_KEY_GAAGA_API_KEY"
+      }
+    }
+  }
+}

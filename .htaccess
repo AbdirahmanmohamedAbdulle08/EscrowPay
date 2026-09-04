@@ -1,0 +1,7 @@
+Options -Indexes
+
+# Set landing.php as the homepage — opens first when visiting localhost/es/
+DirectoryIndex index.php
+
+# Redirect the root / to landing.php explicitly
+# (in case DirectoryIndex alone is not enough)
